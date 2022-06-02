@@ -17,6 +17,7 @@
         "CHEATDAY",
         "cheatdays",
         "doctests",
-        "highscore"
+        "highscore",
+        "mongean"
     ]
 }
