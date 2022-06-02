@@ -1,0 +1,22 @@
+{
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "130"
+    ],
+    "editor.rulers": [
+        100
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "130"
+    ],
+    "python.linting.flake8Args": [
+        "--ignore=E501"
+    ],
+    "cSpell.words": [
+        "CHEATDAY",
+        "cheatdays",
+        "doctests",
+        "highscore"
+    ]
+}
