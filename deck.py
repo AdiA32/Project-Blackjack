@@ -2,6 +2,7 @@ from card import Card
 from hand import PlayerHand, DealerHand
 from shuffle import Shuffle
 
+
 class Deck:
     """
     Card deck of 52 cards.

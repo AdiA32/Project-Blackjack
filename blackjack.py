@@ -4,7 +4,9 @@ from card import Card
 
 # don't change these imports
 from numpy.random import randint, seed
+
 seed(20)
+
 
 class Blackjack:
     """
@@ -69,7 +71,7 @@ class Blackjack:
     Player won with a score of 12. Dealer lost with a score of 2.
     Player lost with a score of 22. Dealer won with a score of 2.
     Player won with a score of 2. Dealer lost with a score of 22.
-    <BLANKLINE>  
+    <BLANKLINE>
     >>> blackjack.reset_log()
 
     #######################################
@@ -87,7 +89,7 @@ class Blackjack:
     Player won with a score of 21. Dealer lost with a score of 17.
     <BLANKLINE>
     >>> blackjack_2.reset_log()
-   
+
     >>> blackjack_2.play_round(3, 21)
     >>> print(blackjack_2.get_log())
     Round 2 of Blackjack!
@@ -121,7 +123,7 @@ class Blackjack:
     Dealer pulled a (3, spades)
     Player lost with a score of 25. Dealer won with a score of 17.
     <BLANKLINE>
-    
+
     >>> with open("game_summaries/game_summary2.txt", encoding = 'utf-8') as f:
     ...     lines = f.readlines()
     ...     print("".join(lines[10:26]))
@@ -171,13 +173,14 @@ class Blackjack:
     >>> print(blackjack_4.get_log())
     Not enough cards for a game.
     """
+
     # Class Attribute(s)
 
     def __init__(self, wallet):
         # Initialize instance attributes
         # auto-increment as needed
         ...
-    
+
     def play_round(self, num_rounds, stand_threshold):
         """
         Plays `num_rounds` Blackjack rounds.
@@ -185,20 +188,20 @@ class Blackjack:
         Parameters:
             num_rounds (int): Number of rounds to play.
             stand_threshold (int): Score threshold for when the player
-            will stand (ie player stands if they have a score >= 
+            will stand (ie player stands if they have a score >=
             this threshold)
         """
         # This could get pretty long!
         ...
-            
+
     def calculate_score(hand):
         """
-        Calculates the score of a given hand. 
+        Calculates the score of a given hand.
 
         Sums up the ranks of each card in a hand. Jacks, Queens, and Kings
         have a value of 10 and Aces have a value of 1 or 11. The value of each
         Ace card is dependent on which value would bring the score closer
-        (but not over) 21. 
+        (but not over) 21.
 
         Should be solved using list comprehension and map/filter. No explicit
         for loops.
@@ -212,7 +215,7 @@ class Blackjack:
 
     def determine_winner(self, player_score, dealer_score):
         """
-        Determine whether the Blackjack round ended with a tie, dealer winning, 
+        Determine whether the Blackjack round ended with a tie, dealer winning,
         or player winning. Update the log to include the winner and
         their scores before returning.
 
@@ -229,25 +232,24 @@ class Blackjack:
         Parameters:
             hand: The hand the deal the cards to depending on its score.
             stand_threshold: Score threshold for when the player
-            will stand (ie player stands if they have a score >= 
+            will stand (ie player stands if they have a score >=
             this threshold).
         """
         ...
 
     def get_log(self):
         ...
-    
+
     def reset_log(self):
         ...
-        
-        
+
     def add_to_file(self, player_hand, dealer_hand, result):
         """
-        Writes the summary and outcome of a round of Blackjack to the 
-        corresponding .txt file. This file should be named game_summaryX.txt 
-        where X is the game number and it should be in `game_summaries` 
+        Writes the summary and outcome of a round of Blackjack to the
+        corresponding .txt file. This file should be named game_summaryX.txt
+        where X is the game number and it should be in `game_summaries`
         directory.
         """
-        
-        # Remember to use encoding = "utf-8" 
+
+        # Remember to use encoding = "utf-8"
         ...
