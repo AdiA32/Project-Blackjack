@@ -22,7 +22,10 @@ class Shuffle:
     25
 
     >>> Shuffle.mongean([i for i in range(1, 11)])
-    [10,8,6,4,2,1,3,5,7,9]
+    [10, 8, 6, 4, 2, 1, 3, 5, 7, 9]
+
+    >>> Shuffle.mongean([i for i in range(1, 10)])
+    [8, 6, 4, 2, 1, 3, 5, 7, 9]
     """
 
     def modified_overhand(cards, num):
@@ -68,4 +71,14 @@ class Shuffle:
 
         # Remember that the "top" of the deck is the first item in the list.
         # Use Recursion. Can use helper functions.
-        
+        # base cases
+        if len(cards) == 1:
+            return cards
+        if len(cards) == 2:
+            return cards[::-1]
+
+        # recursion
+        if len(cards) % 2 == 0:
+            return [cards[-1]] + Shuffle.mongean(cards[:-2]) + [cards[-2]]
+        else:
+            return [cards[-2]] + Shuffle.mongean(cards[:-2]) + [cards[-1]]
